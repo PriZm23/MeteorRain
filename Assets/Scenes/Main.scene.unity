@@ -364,6 +364,7 @@ GameObject:
   - component: {fileID: 1130627546}
   - component: {fileID: 1130627548}
   - component: {fileID: 1130627547}
+  - component: {fileID: 1130627549}
   m_Layer: 5
   m_Name: Joystick
   m_TagString: Untagged
@@ -429,6 +430,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1130627545}
   m_CullTransparentMesh: 1
+--- !u!114 &1130627549
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1130627545}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 471f1504b9ba56246891662aa69e9621, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  thumb: {fileID: 0}
+  delta: {x: 0, y: 0}
 --- !u!1 &1172279079
 GameObject:
   m_ObjectHideFlags: 0
