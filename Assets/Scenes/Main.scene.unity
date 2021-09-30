@@ -438,8 +438,8 @@ MonoBehaviour:
   target: {fileID: 621348429}
   height: 5
   distance: 10
-  rotationDamping: 0
-  heightDamping: 0
+  rotationDamping: 1
+  heightDamping: 1
 --- !u!1 &980538671
 GameObject:
   m_ObjectHideFlags: 0
@@ -1142,7 +1142,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 129604481, guid: d436e780df56fe14fac87c50b6a8d69a, type: 3}
       propertyPath: turnRate
-      value: 0.1
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 1463142165784087558, guid: d436e780df56fe14fac87c50b6a8d69a, type: 3}
       propertyPath: m_Name
