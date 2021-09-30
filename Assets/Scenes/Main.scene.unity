@@ -894,7 +894,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   steering: {fileID: 1130627549}
-  fireRate: 0.2
+  fireRate: 0.1
 --- !u!1001 &1643356750
 PrefabInstance:
   m_ObjectHideFlags: 0
