@@ -41,6 +41,8 @@ GameObject:
   - component: {fileID: 1463142165784087559}
   - component: {fileID: 621348427}
   - component: {fileID: 7752269230169723786}
+  - component: {fileID: 129604481}
+  - component: {fileID: 4044157660087350576}
   m_Layer: 0
   m_Name: Ship
   m_TagString: Untagged
@@ -89,6 +91,32 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
+--- !u!114 &129604481
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1463142165784087558}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62598ec8a5f5467459857086c2d077b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  turnRate: 0.5
+  levelDumping: 1
+--- !u!114 &4044157660087350576
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1463142165784087558}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 202bc1381e7ef2e4cb2c856884586840, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5442197997640461273
 GameObject:
   m_ObjectHideFlags: 0
