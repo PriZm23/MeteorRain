@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: 7a95fa4cf48302849b30f8bfacfa1f0a
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Space Quest
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: e5df159ed92fe8e46a6547464ba3b93c, type: 3}
+  - {fileID: 12800000, guid: a381db2449734514384efe91dab9d02e, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
