@@ -26,7 +26,7 @@ public class SmoothFollow : MonoBehaviour
         }
         // Вычислить желаемые местоположение и ориентацию
         var wantedRotationAngle = target.eulerAngles.y;
-        var wantedHeight = transform.position.y;
+        var wantedHeight = target.position.y + height;
 
         // Выяснить текущую местоположение и ориентацию
         var currentRotationAngle = transform.eulerAngles.y;
