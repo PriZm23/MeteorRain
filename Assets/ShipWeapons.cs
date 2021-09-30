@@ -7,6 +7,24 @@ public class ShipWeapons : MonoBehaviour
     // Шаблон для создания снарядов
     public GameObject shotPrefab;
 
+    public void Awake()
+    {
+        // Когда данный объект запускается, 
+        // сообщить диспетчеру ввода, что использовать 
+        // его как текущий сценарий управления оружием
+        InputManager.instance.SetWeapons(this);
+    }
+    // Вызвываеься при удалении объекта
+    public void OnDestroy()
+    {
+        // Ничего не делать, если вызывается
+        // не в режиме игры
+        if(Application.isPlaying == true)
+        {
+            InputManager.instance.RemoveWeapons(this);
+        }
+    }
+
     // Список пушек для стрельбы
     public Transform[] firePoints;
 

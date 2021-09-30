@@ -34,7 +34,7 @@ public class InputManager : Singletone<InputManager>
         }
     }
     // Вызывается, когда нажимается Fire
-    public void startFiring()
+    public void StartFiring()
     {
         // Запустить программу ведения огня
         StartCoroutine(FireWeapons());
