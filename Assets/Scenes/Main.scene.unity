@@ -1522,7 +1522,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   radius: 250
   asteroidPrefab: {fileID: 354803826, guid: 63a3c5191ecdd884ab07d16f791d5f02, type: 3}
-  spawnRate: 20
+  spawnRate: 15
   variance: 1
   target: {fileID: 0}
   spawnAsteroids: 1
