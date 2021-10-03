@@ -265,6 +265,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 196515995}
+  - component: {fileID: 196515996}
   m_Layer: 0
   m_Name: Boundary
   m_TagString: Untagged
@@ -280,12 +281,26 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 196515994}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.3940344, y: -0.03629303, z: -0.70042515}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &196515996
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 196515994}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99133965a7058994a973a1b249fbc687, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  warningRadius: 400
+  destroyRadius: 500
 --- !u!1 &268034134
 GameObject:
   m_ObjectHideFlags: 0
@@ -1163,12 +1178,14 @@ MonoBehaviour:
   spaceStationPrefab: {fileID: 4796519470657572122, guid: 04369cd3ab597934498c6407f637f83f, type: 3}
   spaceStationStartPosition: {fileID: 1697427003}
   cameraFollow: {fileID: 963194229}
+  boundary: {fileID: 196515996}
   inGameUI: {fileID: 1182884783}
   pausedUI: {fileID: 268034134}
   gameOverUI: {fileID: 1423403097}
   mainMenuUI: {fileID: 1057141591}
+  warningUI: {fileID: 1050553826}
   asteroidSpawner: {fileID: 1133054106}
-  paused: 0
+  paused: 1
 --- !u!4 &1039076447
 Transform:
   m_ObjectHideFlags: 0
@@ -1208,11 +1225,11 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1050553826}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1172279083}
+  m_Father: {fileID: 1182884784}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -1604,7 +1621,6 @@ RectTransform:
   - {fileID: 1182884784}
   - {fileID: 268034135}
   - {fileID: 1423403098}
-  - {fileID: 1050553827}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1644,6 +1660,7 @@ RectTransform:
   - {fileID: 1650443019}
   - {fileID: 776064626}
   - {fileID: 2109630950}
+  - {fileID: 1050553827}
   m_Father: {fileID: 1172279083}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

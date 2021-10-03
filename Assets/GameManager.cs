@@ -19,12 +19,18 @@ public class GameManager : Singletone<GameManager>
     // Сценарий, управляющий главной камерой
     public SmoothFollow cameraFollow;
 
+    // Границы игры
+    public Boundary boundary;
+
     // Контейнеры для разных групп элементов
     // пользовательского интерфейса
     public GameObject inGameUI;
     public GameObject pausedUI;
     public GameObject gameOverUI;
     public GameObject mainMenuUI;
+
+    // Предупреждающая рамка, когда игрок покидает границу
+    public GameObject warningUI;
 
     // Игра находится в состоянии проигрывания?
     public bool gameIsPlaying { get; private set; }
@@ -121,6 +127,10 @@ public class GameManager : Singletone<GameManager>
         {
             Destroy(currentSpaceStation);
         }
+
+        //Скрыть рамку, если она видима
+        warningUI.SetActive(false);
+
         // Прекратить создавать астероиды
         asteroidSpawner.spawnAsteroids = false;
 
@@ -144,6 +154,39 @@ public class GameManager : Singletone<GameManager>
         {
             // Возобновить ход времени
             Time.timeScale = 1.0f;
+        }
+    }
+    public void Update()
+    {
+        // Если корабля нет, выйти
+        if(currentShip == null)
+        {
+            return;
+        }
+        // Если корабль вышел за границу сферы уничтожения
+        // завершить игру. Если он внутри сферы уничтожения,
+        // но за границами сферы предупреждения, показать
+        // предупреждающущю рамку. Если он внутри обоих сфер
+        // скрвть рамку.
+        float distance = (currentShip.transform.position - boundary.transform.position).magnitude;
+
+        if(distance > boundary.destroyRadius)
+        {
+            // Корабль за пределами сферы уничтожения
+            // завершить игру
+            GameOver();
+        }
+        else if(distance > boundary.warningRadius)
+        {
+            // Корабль за пределами сферы предупреждения,
+            // показать рамку
+            warningUI.SetActive(true);
+        }
+        else
+        {
+            // Корабль внутри сферы предупреждения,
+            // скрыть рамку
+            warningUI.SetActive(false);
         }
     }
 }
