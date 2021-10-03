@@ -40,6 +40,12 @@ public class DamageTaking : MonoBehaviour
                 // с текущей ориентацией
                 Instantiate(destructionPrefab, transform.position, transform.rotation);
             }
+            // ≈сли требуетс€ завершить игру, вызвать метод
+            // GameOver класса Manager
+            if(gameOverOnDestroyed == true)
+            {
+                GameManager.instance.GameOver();
+            }
 
         }
     }

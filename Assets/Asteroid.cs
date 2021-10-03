@@ -12,6 +12,11 @@ public class Asteroid : MonoBehaviour
 
         // —оздать красный индикатор дл€ данного астероида
         var indicator = IndicatorManager.instance.AddIndicator(gameObject, Color.red);
+
+        // «апомнить координаты космической станции,
+        // управл€емой диспетчером игры,
+        // дл€ отображени€ рассто€ни€ от неЄ до астероида
+        indicator.showDistanceTo = GameManager.instance.currentSpaceStation.transform;
     }
 
     void Update()

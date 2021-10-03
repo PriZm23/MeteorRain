@@ -126,6 +126,7 @@ GameObject:
   - component: {fileID: 354803825}
   - component: {fileID: 1518526509458674067}
   - component: {fileID: 3757137342906121613}
+  - component: {fileID: -3825401307581548848}
   m_Layer: 0
   m_Name: Asteroid
   m_TagString: Untagged
@@ -205,6 +206,20 @@ MonoBehaviour:
   hitPoints: 1
   destructionPrefab: {fileID: 4635038144569833600, guid: f3e43b284c87ae64b9df8ebb4b834fb3, type: 3}
   gameOverOnDestroyed: 0
+--- !u!114 &-3825401307581548848
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9144556942683879353}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e47909de93355f14a9b34c74689bdf08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 1
+  damageToSelf: 5
 --- !u!1001 &6855093104857670125
 PrefabInstance:
   m_ObjectHideFlags: 0
