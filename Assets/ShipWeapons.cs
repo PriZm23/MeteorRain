@@ -47,6 +47,14 @@ public class ShipWeapons : MonoBehaviour
         // соответствующей пушке
         Instantiate(shotPrefab, firePointToUse.position, firePointToUse.rotation);
 
+        // Если пушка имеет компонент источника звука,
+        // воспроизвести звуковой эффект
+        var audio = firePointToUse.GetComponent<AudioSource>();
+        if (audio)
+        {
+            audio.Play();
+        }
+
         // Перейти е следующей пушке
         firePointIndex++;
 
