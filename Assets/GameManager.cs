@@ -107,6 +107,9 @@ public class GameManager : Singletone<GameManager>
         cameraFollow.target = currentShip.transform;
 
         // Начать создавать астероиды
+        asteroidSpawner.spawnAsteroids = true;
+
+        // Сообщить системе создания астероидов позицию новой станции
         asteroidSpawner.target = currentSpaceStation.transform;
     }
     // Вызывается объектами, завершающими игру при разрушении
